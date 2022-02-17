@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewCarFragment"
+    android:background="@drawable/background"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btMentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg"
+                android:text="Mentés"
+                android:textColor="@color/darkblue" />
+
+            <Button
+                android:id="@+id/btElvetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg"
+                android:text="Elvetés"
+                android:textColor="@color/darkblue" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Kérem adja meg az autó adatait"
+            android:textAlignment="center"
+            android:textColor="@color/darkblue"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textMarka"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Márka:"
+                    android:textAlignment="center"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textEvjarat"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Évjárat:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textAlvaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Alvázszám:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textKod"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Motorkód:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textKm"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Km óra állása:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textUzemanyag"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Üzemanyagszint:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textOlaj"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Olajtípus:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textLegutobbi"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Legutóbbi szervíz:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textRendszam"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Rendszám:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/editMarka"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/darkblue" />
+
+                <EditText
+                    android:id="@+id/editEvjarat"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textColor="@color/darkblue" />
+
+                <EditText
+                    android:id="@+id/editAlvaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textColor="@color/darkblue" />
+
+                <EditText
+                    android:id="@+id/editKod"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/darkblue" />
+
+                <EditText
+                    android:id="@+id/editKm"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textColor="@color/darkblue" />
+
+                <EditText
+                    android:id="@+id/editUzemanyag"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/darkblue" />
+
+                <EditText
+                    android:id="@+id/editOlaj"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/darkblue" />
+
+                <EditText
+                    android:id="@+id/editLegutobbi"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:textColor="@color/darkblue" />
+
+                <EditText
+                    android:id="@+id/editRendszam"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/darkblue" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

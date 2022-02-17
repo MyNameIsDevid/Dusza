@@ -1,0 +1,10 @@
+<owner>
+István
+<car>
+Nissan S14;1995;12;S10;10000;10.5;10W-40;2010/10/10
+<service>
+2010/9/10;motor;motor;100000;9000;1
+2010/10/10;fék;kopoalkatresz;50000;10000;1
+</service>
+</car>
+</owner>
